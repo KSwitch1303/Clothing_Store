@@ -23,6 +23,7 @@ const Product = require('./models/product')
 
 // * middleware
 app.use(express.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/views/public'));
 
 
 // * Link Handlers
@@ -43,6 +44,11 @@ app.post('/add', (req,res)=>{
         res.redirect('/')
     })
 });
+
+app.get('/shop',(req,res) => {
+    res.render('shop')
+});
+
 
 // ! 404
 app.use((req,res)=>{
