@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .error1{
+            position: absolute;
+            top: 10%;
+            left: 17%;
+            right: 17%;
+            bottom: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color:b;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        }
+        .content{
+            max-width: 600px;
+            text-align: center;
+        }
+        .content h1{
+            font-size: 18vw;
+            line-height: 1em;
+        }
+        .content h4{
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #000;
+            max-width: 600px;
+        }
+        .btn{
+            margin: 25px 0;
+            display: inline-flex;
+        }
+        a{
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            border: 2px solid black;
+            color: black;
+            font-weight: 500;
+            padding: 10px 25px;
+            border-radius: 10px;
+        }
+        a:hover{
+            background: black;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <h1>404</h1>
+    <div class="error1">
+      <div class="content">
+        <h1>404</h1>
+        <h4>Oops! page not found</h4>
+        <div class="btn">
+            <a href="/">Visit Shop</a>
+        </div>
+      </div>
+    </div>
+  
 </body>
 </html>

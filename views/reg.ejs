@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+        }
+        .form-login{
+            background: #fff;
+            border-radius: 6px;
+            max-width: 430px;
+            padding: 30px;
+            width: 100%;
+        }
+        header{
+            font-size: 30px;
+            font-weight: 800;
+            color: black;
+            text-align: center;
+        }
+        form{
+            margin-top: 30px;
+
+        }
+        form .input{
+            height: 50px;
+            width: 100%;
+            margin-top: 30px;
+            position: relative;
+        }
+        .input input,
+        .input-btn button{
+            height: 100%;
+            width: 100%;
+            border: none;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 6px;
+        }
+        .input-btn{
+            height: 50px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .input-btn button:hover{
+            background-color: black;
+            color: #fff;
+        }
+        
+        .input input{
+            padding: 0 15px;
+            border: 1px solid #cacaca;
+        }
+        .input:hover{
+            border: 1px solid black;
+        }
+        .input-link{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .input-link span,
+        .input-link a{
+            font-size: 14px;
+            font-weight: 400;
+            color: #232836;
+        }
+        .input-link a{
+            text-decoration: none;
+            color: #0171d3;
+        }
+        .input-link a:hover{
+            text-decoration: underline;
+        }
+        .icon1{
+            font-size: 18px;
+            position: absolute;
+            color: #8b8b8b;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            padding: 5px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="form-login">
+            <div class="form-content">
+                <header>Sign Up</header>
+
+                <form action="/signup" method="POST">
+
+                    <div class="input">
+                        <input type="email" type="text" placeholder="Email" class="input-content" name="email" required>
+                    </div>
+
+                    <div class="input">
+                        <input type="text" placeholder="Username" class="input-content" name="username" required>
+                    </div>
+
+
+                    <div class="input">
+                        <input type="password" placeholder="password" id="password" class="input-content" name="password" required>
+                        <i class="bx bx-hide icon1"></i>
+                    </div>
+
+                    
+                    <div class="input">
+                        <input type="password" placeholder="Confirm Password" id="confirm_password" class="input-content" >
+                        <i class="bx bx-hide icon1"></i>
+                    </div>
+
+                    <div class="input-btn">
+                       <button id="btn1">Sign Up</button>
+                    </div>
+
+                    <div class="input-link">
+                       <span>Already have an Account?</span> <a href="/login" class="forgpass">Login</a>
+                     </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

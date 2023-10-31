@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Shop Home</title>
+        <!-- fontawesome cdn -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bootstrap css -->
+        <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        *{
+            font-family: 'Comfortaa', cursive;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1200px;
+           
+        }
+        .container > h1{
+            padding: 20px 0;
+        }
+        .cart{
+            display: flex;
+        }
+        .products{
+            flex: 0.75;
+        }
+        .product{
+            display: flex;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid silver;
+            margin-bottom: 20px;
+        }
+        .product:hover{
+            border: none;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            transform: scale(1.01);
+        }
+        .product > img{
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product > img:hover{
+            transform: scale(1.04);
+        }
+        .product-info{
+        padding: 20px;
+            width: 100%;
+            position: relative;
+        }
+        .product-name, .product-price, .product-offer{
+            margin-bottom: 20px;
+        }
+        .product-remove{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 25px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product-quantity > input{
+            width: 70px;
+            padding: 5px ;
+            text-align: center;
+        }
+        .fa{
+            margin-right: 5px;
+        }
+        .cart-total{
+            width: 50%;
+            flex: 0.25;
+            margin-left: 20px;
+            padding: 20px;
+            height: 240px;
+            border: 1px solid silver;
+            border-radius: 5px;
+        }
+        .cart-total p{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+        .cart-total a{
+            display: block;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+        }
+        #close-cart{
+            position: absolute;
+            top: 1rem;
+            right: 0.8rem;
+            font-size: 2rem;
+            color: black;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 700px){
+            .remove{
+                display: none;
+            }
+            .product{
+                height: 150px;
+            }
+            .product > img{
+                height: 150px;
+                width: 200px;
+            }
+            .product-name, .product-price, .product-offer{
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (max-width: 900px){
+            .cart{
+                flex-direction: column;
+            }
+            .cart-total{
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+        }
+        @media screen and (max-width: 1220px){
+            .container{
+                max-width: 95%;
+            }
+        }
+        </style>
+<body>
+
+    <div class="container">
+        <div class="cart">
+            <div class="products">
+                <div class="product">
+                    <img src="product1.jpeg">
+                    <div class="product-info">
+                        <h3 class="product-name">New Shoes</h3>
+                        <h4 class="product-price">#0</h4>
+                        <p class="product-quantity"><input type="number" name="" value="1" class="cart-quantity">
+                        <p class="product-remove">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="product1.jpeg">
+                    <div class="product-info">
+                        <h3 class="product-name">New Bag</h3>
+                        <h4 class="product-price">#0</h4>
+                        <p class="product-quantity"><input type="number" name="" value="1" class="cart-quantity"></p>
+                        <p class="product-remove">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-total">
+                <p>
+                    <span>Total Price</span>
+                    <span>#0</span>
+                </p>
+                <a href="#">BUY</a>
+            </div>
+        </div>
+        <!-- <i class='bx bx-x' id="close-cart"></i> -->
+    </div>
+    <!-- footer -->
+
+     <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">Demo Shop</a>
+                    <p class = "text-white text-muted mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum mollitia quisquam veniam odit cupiditate, ullam aut voluptas velit dolor ipsam?</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Links</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Home
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "Shop.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Shop
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Blogs
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Contact Us</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            I dont Know Where!!!!!!!
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Demo Shop.support@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            +234 0000000000
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-pinterest"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let cartIcon = document.querySelector("#cart-icon");
+    let cart = document.querySelector(".cart");
+    let closeCart = document.querySelector("#close-cart");
+
+    cartIcon.onclick = () => {
+        cart.classList.add("active");
+    };
+
+    closeCart.onclick = () => {
+        cart.classList.remove("active");
+    };
+
+    });
+</script>
+</html>
